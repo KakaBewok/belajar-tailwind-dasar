@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- import font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Belajar Tailwind</title>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      }
+    </style>
+    <!-- menambahkan config utilities buatan -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+            colors: {
+              koneng: "#ff0",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="font-bold text-center my-4 text-4xl">
+      <span
+        class="bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text"
+        >Belajar Tailwind</span
+      >
+      di WPU
+    </h1>
+
+    <section class="mb-10 bg-indigo-300">
+      <div class="m-5 text-3xl text-center bg-red-200">Margin</div>
+      <div class="p-4 bg-red-200">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200">
+      <h2
+        class="text-3xl text-center bg-gradient-to-l from-indigo-200 via-red-400 to-yellow-300 mb-3"
+      >
+        Width
+      </h2>
+      <div class="w-32 h-32 bg-koneng">Height</div>
+    </section>
+
+    <section class="font-inter max-w-3xl mx-auto">
+      <h2 class="mb-2 text-4xl font-bold">Typography</h2>
+      <div class="mb-2 text-lg text-gray-500">
+        By <a href="#" class="text-gray-700 font-semibold">Noprizal</a>, 1
+        Januari 2022
+      </div>
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <a href="#" class="underline font-semibold text-blue-500"
+          >Exercitationem</a
+        >
+        sit dicta earum qui incidunt, ea ex dolorum iusto assumenda quaerat!
+      </p>
+      <blockquote class="mb-4 italic font-thin text-xl">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos in nisi
+        optio illum quasi aut maxime? Magnam vel, eius voluptas corporis sunt
+        dolor possimus autem velit, ab officia porro ducimus!"
+      </blockquote>
+    </section>
+
+    <!-- tanda [] untuk mengkustom nilainya -->
+    <!-- bg-scroll bg-fixed bg-local -->
+    <div
+      class="max-w-xl h-96 bg-slate-300 mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+      style="
+        background-image: url('https://source.unsplash.com/1000x600?laptop');
+      "
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+        asperiores repudiandae eligendi unde magnam id, nobis culpa non.
+        Nesciunt provident velit repellat facilis distinctio explicabo quod,
+        porro qui sapiente, autem tenetur aliquid amet quo aliquam vero maiores
+        eos molestias! Consectetur, expedita blanditiis. Dicta quidem minus
+        debitis ipsa quaerat quia nam deserunt sed quas similique laboriosam
+        recusandae inventore quis temporibus, id amet fugiat earum facilis
+        incidunt iste. In itaque, atque sit eveniet quasi eaque? Totam aut magni
+        quidem repellat quaerat. Natus maiores dicta in modi provident incidunt
+        facilis non minus, corrupti eius nulla totam error quaerat laudantium
+        dolorum vitae sequi. Aut.
+      </p>
+    </div>
+
+    <div
+      class="mt-32 max-w-xl h-96 mx-auto bg-slate-300 bg-cover bg-no-repeat rounded-2xl border-4 border-teal-500 shadow-lg shadow-teal-300 flex"
+      style="background-image: url(./img/1.jpg)"
+    >
+      <div
+        class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-sm rounded-full"
+      ></div>
+    </div>
+
+    <hr class="my-20" />
+
+    <!-- toggle sederhana untuk dark mode -->
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">dark</span>
+    </div>
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 text-white rounded-full font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-red-500 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    >
+      Simpan
+    </button>
+
+    <!-- belajar grouping (groupnya yang dihover, childnya yang kena impactnya) -->
+    <div
+      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter group hover:bg-sky-500 dark:hover:bg-slate-300"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter-mr-3 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor
+        similique distinctio consectetur est! Quae nulla cupiditate asperiores
+        debitis ullam consequuntur, natus eaque dolor perspiciatis quisquam quos
+        ad, ipsam rem.
+      </p>
+    </div>
+
+    <!-- belajar pseudo class dan element -->
+    <!-- untuk parent-child pake group, untuk sibling pake peer -->
+    <div
+      class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-[8px] text-slate-700 after:content-['*'] after:text-pink-500 after:ml-1"
+            >Email</span
+          >
+          <input
+            id="email"
+            type="email"
+            placeholder="Masukan email"
+            class="px-3 py-3 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 invalid:focus:ring-1 peer"
+          />
+          <p class="text-sm m-2 text-pink-700 peer-invalid:visible invisible">
+            Email tidak valid
+          </p>
+        </label>
+      </form>
+    </div>
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", () => {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
