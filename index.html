@@ -272,7 +272,7 @@
 
     <!-- belajar buat columns -->
     <div
-      class="border rounded-lg shadow-lg p-10 mt-20 container mx-auto columns-3"
+      class="border rounded-lg shadow-lg p-10 mt-20 container mx-auto columns-2 md:columns-3 lg:columns-4"
     >
       <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
       <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
@@ -280,6 +280,43 @@
       <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
       <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
       <img src="https://source.unsplash.com/600x400" alt="image" class="mb-4" />
+    </div>
+
+    <hr class="my-20 border-t-4" />
+
+    <!-- belajar breakpoint/responsive di tailwind -->
+    <!-- secara default di tailwind sudah menggunakan mobile first -->
+    <!-- <div
+      class="container px-6 font-inter max-w-md mx-auto bg-slate-100 sm:bg-red-200 md:bg-green-200 lg:bg-blue-200 xl:bg-yellow-200"
+    > -->
+    <div
+      class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl"
+    >
+      <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-6xl">
+        Noprizal
+      </h3>
+      <img
+        src="./img/1.jpg"
+        alt="gambar"
+        class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center md:h-128"
+      />
+      <h2
+        class="mt-5 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl"
+      >
+        Mari belajar programming bersama WPU!
+      </h2>
+      <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse enim
+        aliquam vel beatae, aspernatur laborum soluta inventore repudiandae
+        culpa mollitia placeat.
+      </p>
+      <div class="mt-4 sm:mt-6">
+        <a
+          href="#"
+          class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base"
+          >Subscribe channel youtube</a
+        >
+      </div>
     </div>
 
     <!-- margin bottom agar bisa discroll -->
