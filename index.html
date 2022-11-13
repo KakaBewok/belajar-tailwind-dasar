@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- import font Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Belajar Tailwind</title>
-    <style type="text/tailwindcss">
-      #toggle:checked ~ label div.toggle-circle {
-        @apply translate-x-3;
-      }
-    </style>
     <!-- menambahkan config utilities buatan -->
-    <script>
+    <!-- <script>
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -52,7 +48,7 @@
           },
         },
       };
-    </script>
+    </script> -->
   </head>
   <body class="dark:bg-slate-800 dark:text-slate-200">
     <h1 class="font-bold text-center my-4 text-4xl">
@@ -415,78 +411,66 @@
       >
         <span class="self-end">@sandhikagalih</span>
       </div>
-
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
-        <div
-          class="w-full h-full bg-[url('./img/11.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
-        ></div>
+      <!-- 1 -->
+      <div class="grid-card group">
+        <div class="grid-card-img bg-[url('./img/1.jpg')]"></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
-        <div
-          class="w-full h-full bg-[url('./img/22.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
-        ></div>
+      <!-- 2 -->
+      <div class="grid-card group md:col-start-3">
+        <div class="grid-card-img bg-[url('./img/22.jfif')]"></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
-        <div
-          class="w-full h-full bg-[url('./img/33.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
-        ></div>
+      <!-- 3 -->
+      <div class="grid-card group">
+        <div class="grid-card-img bg-[url('./img/33.jfif')]"></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 4 -->
+      <div class="grid-card group">
         <div
           class="w-full h-full bg-[url('./img/44.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 5 -->
+      <div class="grid-card group">
         <div
           class="w-full h-full bg-[url('./img/55.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg md:col-start-2 overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 6 -->
+      <div class="grid-card group md:col-start-2">
         <div
           class="w-full h-full bg-[url('./img/66.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg md:col-start-4 overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 7 -->
+      <div class="grid-card group md:col-start-4">
         <div
           class="w-full h-full bg-[url('./img/77.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 8 -->
+      <div class="grid-card group">
         <div
           class="w-full h-full bg-[url('./img/88.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 9 -->
+      <div class="grid-card group md:col-start-3">
         <div
           class="w-full h-full bg-[url('./img/99.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
-      <div
-        class="h-15 bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg md:col-start-3 overflow-hidden group relative hover:scale-95 transition-all duration-500"
-      >
+      <!-- 10 -->
+      <div class="grid-card group md:col-start-3">
         <div
           class="w-full h-full bg-[url('./img/10.jfif')] bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500"
         ></div>
       </div>
     </div>
+
+    <!-- belajar directive and function -->
+    <h1>hello</h1>
+
+    <button class="btn-blue">Submit</button>
 
     <!-- margin bottom agar bisa discroll -->
     <div class="mb-96"></div>

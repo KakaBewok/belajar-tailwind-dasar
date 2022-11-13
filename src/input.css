@@ -1,0 +1,40 @@
+/* dicompile paling atas */
+@tailwind base;
+/* dicompile paling tengah */
+@tailwind components;
+/* dicompile paling bawah */
+@tailwind utilities;
+
+/* kalo gak pake @layer, style otomatis akan disimpan/dicompile di paling bawah */
+/* h1 {
+  @apply text-8xl;
+} */
+
+@layer base {
+  h1 {
+    @apply text-8xl text-koneng;
+    /* color: theme(colors.koneng); */
+  }
+}
+
+@layer components {
+  /* custom component button sendiri, mirip2 kaya bootstrap */
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-6 rounded;
+  }
+  /* custom component grid-card parent sendiri*/
+  .grid-card {
+    @apply bg-blue-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg overflow-hidden relative hover:scale-95 transition-all duration-500;
+  }
+  /* custom component grid-card-img sendiri */
+  .grid-card-img {
+    @apply w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500;
+  }
+}
+
+/* custom css untuk toggle darkmode */
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-3;
+  }
+}
